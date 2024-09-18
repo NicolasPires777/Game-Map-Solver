@@ -1,6 +1,5 @@
 from random import randint
-
-Maps = []
+from mapas import Maps
 
 def creat_map(name, num_positions):
     positions = []
@@ -22,6 +21,7 @@ def search_map(name_map):
 def draw_map(name_map):
     positions = search_map(name_map)
     if positions:
+        print("")
         print("===" * len(positions))
         draw_line(positions,1,"___")
         draw_line(positions,0,"___")
@@ -38,6 +38,4 @@ def draw_line(positions, condition, line_type):
         else:
             print(" " * len(line_type),end="")
     print()
-
-
 
